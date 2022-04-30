@@ -3,8 +3,15 @@ import './Header.css';
 import logo from '../../../images/logo.png';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+    const handleSignOut = () => {
+        signOut(auth);
+    }
     return (
         <Navbar className='navbar' collapseOnSelect expand="lg" variant="dark">
             <Container>
@@ -19,10 +26,22 @@ const Header = () => {
                         <Nav.Link as={Link} to='home'>Home</Nav.Link>
                         <Nav.Link href="home#inventories">Inventory</Nav.Link>
                         <Nav.Link as={Link} to='blogs'>Blogs</Nav.Link>
-                        <Nav.Link as={Link} to='register'>Register</Nav.Link>
-                        <Nav.Link as={Link} to='login'>
-                            Login
-                        </Nav.Link>
+                        {
+                            user && <>
+                                <Nav.Link as={Link} to='manage-items'>Manage Items</Nav.Link>
+                                <Nav.Link as={Link} to='add-items'>Add Item</Nav.Link>
+                                <Nav.Link as={Link} to='my-items'>My Items</Nav.Link>
+                            </>
+                        }
+                        {
+                            user ? <button type="button" onClick={handleSignOut}>Sign Out</button> :
+                                <Nav>
+                                    <Nav.Link as={Link} to="login">Login</Nav.Link>
+                                    <Nav.Link as={Link} to='register'>Register</Nav.Link>
+                                </Nav>
+
+                        }
+
                     </Nav>
                 </Navbar.Collapse>
             </Container>

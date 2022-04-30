@@ -2,22 +2,28 @@
     {
         "id": 1,
         "name": "BMW",
-        "price": "5000000",
-        "description": "The 2022 BMW 4 Series blends class and performance in a way that few other luxury small cars can. It has ample power, athletic handling, and an upscale interior filled with tech features.",
+        "price": "$350",
+        "description": "The 2022 BMW 4 Series blends class and performance in a way that few other luxury small cars can.",
+        "quantity": "20",
+        "supplier": "Aurthor",
         "img": "https://i.ibb.co/tBt1DXk/bmw-m4.jpg"
     },
     {
         "id": 2,
         "name": "Ferrari",
-        "price": "75000000",
-        "description": "It is powered by a 4.0-liter V-8 and a pair and three electric motors that produce a combined output of 986 horsepower. It can sprint to 62 mph in 2.5 seconds",
+        "price": "$580",
+        "description": "It is powered by a 4.0-liter V-8 and a pair and three electric motors that produce a combined output.",
+        "quantity": "10",
+        "supplier": "Smith",
         "img": "https://i.ibb.co/BK75Dqn/ferrari-br20.jpg"
     },
     {
         "id": 3,
         "name": "Hondi Civic",
-        "price": "4500000",
-        "description": "The Honda Civic has 1 Diesel Engine and 1 Petrol Engine on offer. The Diesel engine is 1597 cc while the Petrol engine is 1799 cc . It is available with Manual & Automatic transmission.Depending upon the variant and fuel type the Civic has a mileage of 16.5 to 26.8 kmpl",
+        "price": "$238",
+        "description": "The Honda Civic has 1 Diesel Engine and 1 Petrol Engine on offer. The Diesel engine is 1597 cc.",
+        "quantity": "35",
+        "supplier": "Rohit",
         "img": "https://i.ibb.co/gyWXw6d/honda-civic-1.jpg"
     }
 ]

@@ -1,32 +1,77 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Login.css';
 import car1 from '../../images/car1.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+    let errorMsg;
+    const [
+        signInWithEmailAndPassword,
+        user,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+
+    const handleSubmit = event => {
+        event.preventDefault();
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
+
+        signInWithEmailAndPassword(email, password);
+    }
+
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
+    if (error) {
+        errorMsg = <p className='text-danger'>Error: {error.message}</p>
+    }
+
+    const navigateToRegister = event => {
+        navigate('/register');
+    }
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Password Reset Email has been sent');
+        }
+        else {
+            toast('Please Enter Your Email Address');
+        }
+    }
     return (
         <div className="login-container">
             <div className="forms-container">
                 <div className="signin-signup">
-                    <form action="#" className="sign-in-form">
+                    <form onSubmit={handleSubmit} className="sign-in-form">
                         <h2 className="title">Sign in</h2>
                         <div className="input-field">
                             <i className="fas fa-user"></i>
-                            <input type="text" placeholder="Email" />
+                            <input type="email" ref={emailRef} placeholder="Email" />
                         </div>
                         <div className="input-field">
                             <i className="fas fa-lock"></i>
-                            <input type="password" placeholder="Password" />
+                            <input type="password" ref={passwordRef} placeholder="Password" />
                         </div>
                         <input type="submit" value="Login" className="btn solid" />
+                        <p>Forget Password? <button onClick={resetPassword}>Reset Password</button> </p>
                         <p className="social-text">Or,</p>
-                        <div className="social-media">
-                            <a href="/" className="social-icon">
-                                <i className="fab fa-google"></i>
-                                <span>Sign in with Google</span>
-                            </a>
-                        </div>
+                        <SocialLogin></SocialLogin>
                     </form>
+                    {errorMsg}
                 </div>
             </div>
 
@@ -39,14 +84,14 @@ const Login = () => {
                             ex ratione. Aliquid!
                         </p>
                         <Link to='/register'>
-                            <button className="btn transparent" id="sign-up-btn">
+                            <button onClick={navigateToRegister} className="btn transparent" id="sign-up-btn">
                                 Sign up
                             </button>
                         </Link>
                     </div>
                     <img src={car1} className="image" alt="" />
                 </div>
-
+                <ToastContainer></ToastContainer>
             </div>
         </div>
     );

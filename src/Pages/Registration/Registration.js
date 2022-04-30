@@ -1,34 +1,61 @@
 import React from 'react';
 import '../Login/Login.css';
 import car2 from '../../images/car2.png';
-import { Link } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
 const Registration = () => {
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+    const navigate = useNavigate();
+
+    const navigateLogin = () => {
+        navigate('/login');
+    }
+
+
+    if (loading || updating) {
+        return <Loading></Loading>
+    }
+    const handleRegister = async (event) => {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
+        navigate('/home');
+    }
     return (
         <div className="login-container">
             <div className="forms-container">
                 <div className="signin-signup">
-                    <form action="#" className="sign-in-form">
+                    <form onSubmit={handleRegister} className="sign-in-form">
                         <h2 className="title">Sign up</h2>
                         <div class="input-field">
                             <i class="fas fa-user"></i>
-                            <input type="text" placeholder="Name" />
+                            <input type="text" name="name" placeholder="Name" />
                         </div>
                         <div className="input-field">
                             <i className="fas fa-user"></i>
-                            <input type="text" placeholder="Email" />
+                            <input type="text" name="email" placeholder="Email" />
                         </div>
                         <div className="input-field">
                             <i className="fas fa-lock"></i>
-                            <input type="password" placeholder="Password" />
+                            <input type="password" name="password" placeholder="Password" />
                         </div>
                         <input type="submit" value="Sign Up" className="btn solid" />
                         <p className="social-text">Or,</p>
-                        <div className="social-media">
-                            <a href="/" className="social-icon">
-                                <i className="fab fa-google"></i>
-                                <span>Sign up with Google</span>
-                            </a>
-                        </div>
+                        <SocialLogin></SocialLogin>
                     </form>
                 </div>
             </div>
@@ -42,7 +69,7 @@ const Registration = () => {
                             ex ratione. Aliquid!
                         </p>
                         <Link to='/login'>
-                            <button className="btn transparent" id="sign-up-btn">
+                            <button className="btn transparent" id="sign-up-btn" onClick={navigateLogin}>
                                 Sign In
                             </button>
                         </Link>
