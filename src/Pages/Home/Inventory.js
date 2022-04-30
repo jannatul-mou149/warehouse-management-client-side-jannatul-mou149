@@ -1,9 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import './Inventory.css';
 
-const Inventory = () => {
+const Inventory = ({ inventory }) => {
+    const { name, id, description, price, img } = inventory;
     return (
-        <div>
-            <h5>Inventory</h5>
+        <div className='inventory'>
+            <img className='inventory-image' src={img} alt="" />
+            <div className='p-4'>
+                <h4>{name}</h4>
+                <p>Price: {price} Tk</p>
+                <p><small>{description}</small></p>
+                <Link to={`/inventory/${id}`}>
+                    <button className='btn btn-primary'>Manage</button>
+                </Link>
+            </div>
         </div>
     );
 };

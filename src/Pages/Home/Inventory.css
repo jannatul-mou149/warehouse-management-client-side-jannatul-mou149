@@ -1,0 +1,11 @@
+.inventory {
+    border-radius: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.inventory-image {
+    border-radius: 5px;
+    width: 100%;
+}

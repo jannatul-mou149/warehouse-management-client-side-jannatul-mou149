@@ -1,13 +1,12 @@
 import React from 'react';
 import Banner from './Banner';
-import Inventory from './Inventory';
+import Inventories from './Inventories';
 
 const Home = () => {
     return (
         <div>
-            <h1>Home page</h1>
             <Banner></Banner>
-            <Inventory></Inventory>
+            <Inventories></Inventories>
         </div>
     );
 };
