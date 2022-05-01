@@ -9,11 +9,9 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 const Registration = () => {
     const [
         createUserWithEmailAndPassword,
-        user,
         loading,
-        error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const [updateProfile, updating] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
 

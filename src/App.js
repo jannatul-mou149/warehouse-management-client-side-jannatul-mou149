@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
-import AllInventories from './AllInventories/AllInventories';
 import AllInventory from './AllInventory/AllInventory';
 import './App.css';
+import AddItems from './Pages/AddItems/AddItems';
 import Blogs from './Pages/Blogs/Blogs';
 import Home from './Pages/Home/Home';
 import InventoryDetails from './Pages/Home/InventoryDetails';
@@ -20,6 +20,7 @@ function App() {
         <Route path='/car/:id' element={<InventoryDetails></InventoryDetails>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/car/inventory' element={<AllInventory></AllInventory>} />
+        <Route path='/addItems' element={<AddItems></AddItems>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Registration></Registration>}></Route>
       </Routes>
