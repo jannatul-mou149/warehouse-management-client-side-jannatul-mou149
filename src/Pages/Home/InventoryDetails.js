@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const InventoryDetails = () => {
     const { id } = useParams();
@@ -11,6 +11,10 @@ const InventoryDetails = () => {
             .then(res => res.json())
             .then(data => setCar(data))
     }, [id])
+    const navigate = useNavigate();
+    const navigateToInventory = () => {
+        navigate(`/car/inventory`);
+    }
 
     const handleCarQuantity = () => {
         let { name, _id, description, price, img, quantity, supplier } = car;
@@ -83,7 +87,7 @@ const InventoryDetails = () => {
             <div className="container py-5">
                 <div className="inner-content">
                     <h1 className='text-center text-primary mb-4'>{car.name}</h1>
-                    <img className='img-fluid' src={car.img} />
+                    <img className='img-fluid' src={car.img} alt="" />
 
                     <div className='text-center mt-5'>
                         <p>Price: {car.price} Tk</p>
@@ -97,8 +101,8 @@ const InventoryDetails = () => {
                     <br />
                     <input type="submit" value="Update Stock" />
                 </form>
+                <button onClick={navigateToInventory} className='btn'>Manage Inventory</button>
             </div>
-
         </div>
     );
 };
