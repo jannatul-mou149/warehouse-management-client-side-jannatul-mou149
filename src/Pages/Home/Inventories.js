@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import './Inventories.css';
 import Inventory from './Inventory';
 const Inventories = () => {
-    const [inventories, setInventories] = useState([]);
+    const [cars, setCars] = useState([]);
     useEffect(() => {
-        fetch('inventory.json')
+        fetch('http://localhost:5000/car')
             .then(res => res.json())
-            .then(data => setInventories(data))
+            .then(data => setCars(data))
     }, []);
     return (
         <div id="inventories" className='container my-5'>
@@ -14,9 +14,9 @@ const Inventories = () => {
                 <h1 className='text-Secondary fw-bold text-center mb-5'>Inventories</h1>
                 <div className="inventories-container">
                     {
-                        inventories.map(inventory => <Inventory
-                            key={inventory.id}
-                            inventory={inventory}
+                        cars.map(car => <Inventory
+                            key={car._id}
+                            car={car}
                         >
                         </Inventory>)
                     }
