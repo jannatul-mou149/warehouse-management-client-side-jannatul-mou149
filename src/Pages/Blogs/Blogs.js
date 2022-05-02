@@ -12,11 +12,10 @@ const Blogs = () => {
                                 <div className="icon-topic">Javascript, NodeJs</div>
                             </a>
                         </div>
-                        <h4>Question here</h4>
+                        <h4>Difference between javascript and nodejs</h4>
                         <div className="seperator"></div>
                         <p id="answer">Question Answer here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium beatae repudiandae corporis voluptatibus ullam excepturi suscipit quasi debitis, asperiores inventore?</p>
                         <a href="/" className="read-more">Read More
-                            <i className="fa-solid fa-arrow-right-long"></i>
                         </a>
                     </div>
                 </div>
@@ -28,11 +27,10 @@ const Blogs = () => {
                                 <div className="icon-topic">NodeJS, MongoDB</div>
                             </a>
                         </div>
-                        <h4>Question here</h4>
+                        <h4>When should you use nodejs and when should you use mongodb</h4>
                         <div className="seperator"></div>
                         <p id="answer1">Question Answer here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium beatae repudiandae corporis voluptatibus ullam excepturi suscipit quasi debitis, asperiores inventore?</p>
                         <a href="/" className="read-more">Read More
-                            <i className="fa-solid fa-arrow-right-long"></i>
                         </a>
                     </div>
                 </div>
@@ -44,11 +42,10 @@ const Blogs = () => {
                                 <div className="icon-topic">SQL and NOSQL database</div>
                             </a>
                         </div>
-                        <h4>Question here</h4>
+                        <h4>Differences between sql and nosql databases.</h4>
                         <div className="seperator"></div>
                         <p id="answer2">Question Answer here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium beatae repudiandae corporis voluptatibus ullam excepturi suscipit quasi debitis, asperiores inventore?</p>
                         <a href="/" className="read-more">Read More
-                            <i className="fa-solid fa-arrow-right-long"></i>
                         </a>
                     </div>
                 </div>
@@ -60,11 +57,10 @@ const Blogs = () => {
                                 <div className="icon-topic">JWT Token</div>
                             </a>
                         </div>
-                        <h4>Question here</h4>
+                        <h4>What is the purpose of jwt and how does it work</h4>
                         <div className="seperator"></div>
                         <p id="answer3">Question Answer here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium beatae repudiandae corporis voluptatibus ullam excepturi suscipit quasi debitis, asperiores inventore?</p>
                         <a href="/" className="read-more">Read More
-                            <i className="fa-solid fa-arrow-right-long"></i>
                         </a>
                     </div>
                 </div>

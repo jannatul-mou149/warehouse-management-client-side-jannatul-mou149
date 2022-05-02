@@ -82,14 +82,13 @@ const InventoryDetails = () => {
 
     return (
         <div>
-            <h1 className='text-center m-5'>Inventory details</h1>
+            <h1 className='fw-bold text-center m-5'>Inventory details</h1>
 
             <div className="container py-5">
                 <div className="inner-content">
-                    <h1 className='text-center text-primary mb-4'>{car.name}</h1>
                     <img className='img-fluid' src={car.img} alt="" />
-
-                    <div className='text-center mt-5'>
+                    <h1 className='text-center text-secondary m-2'>{car.name}</h1>
+                    <div className='text-center mt-3'>
                         <p>Price: {car.price} Tk</p>
                         <p>Supplier: {car.supplier}</p>
                         <p>Quantity : {car.quantity}</p>
@@ -101,7 +100,9 @@ const InventoryDetails = () => {
                     <br />
                     <input type="submit" value="Update Stock" />
                 </form>
-                <button onClick={navigateToInventory} className='btn'>Manage Inventory</button>
+                <div className='text-center'>
+                    <button onClick={navigateToInventory} className='btn'>Manage Inventory</button>
+                </div>
             </div>
         </div>
     );

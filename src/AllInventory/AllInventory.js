@@ -49,7 +49,7 @@ const AllInventory = () => {
                             <td><small>{car.description}</small></td>
                             <td>{car.price}</td>
                             <td>{car.quantity}</td>
-                            <td><button onClick={() => handleDelete(car._id)}><FontAwesomeIcon icon={faTrashCan} beatFade /></button></td>
+                            <td><button onClick={() => handleDelete(car._id)}><FontAwesomeIcon icon={faTrashCan} fade /></button></td>
                         </tr>)
                     }
                 </tbody>
