@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './SocialLogin.css';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -27,7 +27,7 @@ const SocialLogin = () => {
         <div>
             {errorMsg}
             <button onClick={() => signInWithGoogle()}
-                className="btn social-media">
+                className="btnn">
                 <i className="fab fa-google"></i>
                 <span>Sign in with Google</span>
             </button>

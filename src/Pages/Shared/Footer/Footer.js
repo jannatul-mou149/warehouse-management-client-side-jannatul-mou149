@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="footer-container">
-                <div className="row">
+                <div className="main-row">
                     <div className="single_footer">
                         <h4>Services</h4>
                         <ul>
@@ -27,13 +27,12 @@ const Footer = () => {
                     </div>
                     <div className="sub-social">
                         <div className="single_footer single_footer_address">
-                            <h4>Subscribe today</h4>
-                            <div className="signup_form">
-                                <form action="#" className="subscribe">
-                                    <input type="text" className="subscribe__input" placeholder="Enter Email Address" />
-                                    <button type="button" className="subscribe__btn"><i className="fas fa-paper-plane"></i></button>
-                                </form>
-                            </div>
+                            <h4>Join Us</h4>
+                            <ul>
+                                <li><a href="/">Lorem Ipsum</a></li>
+                                <li><a href="/">Simply dummy text</a></li>
+                            </ul>
+
                         </div>
                         <div className="social_profile">
                             <ul>

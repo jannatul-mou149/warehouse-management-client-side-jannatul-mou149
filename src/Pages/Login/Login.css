@@ -140,7 +140,8 @@ form.sign-in-form {
 }
 
 .btn {
-    width: 380px;
+    max-width: 380px;
+    width: 100%;
     background-color: #7845F9;
     border: none;
     outline: none;

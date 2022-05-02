@@ -34,17 +34,7 @@
     position: relative;
     box-shadow: 2px 2px 7px 1px rgba(120, 69, 249, 0.3);
     border-radius: 5px;
-
-    /* overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    transition: white-space .5s; */
 }
-
-/* .item .item-in:hover{
-    white-space: normal;
-    transition: white-space .5s;
-} */
 
 .item .item-in::before {
     content: "";
@@ -73,10 +63,6 @@
 .item p {
     font-size: 1rem;
     margin-bottom: 30px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    transition: all 1s ease-in;
 }
 
 .item a.read-more {

@@ -67,7 +67,7 @@ const Login = () => {
                             <input type="password" ref={passwordRef} placeholder="Password" />
                         </div>
                         <input type="submit" value="Login" className="btn solid" />
-                        <p>Forget Password? <button onClick={resetPassword}>Reset Password</button> </p>
+                        <p className='text-white'>Forget Password? <button style={{ "color": "#7845F9" }} onClick={resetPassword}>Reset Password</button> </p>
                         <p className="social-text">Or,</p>
                         <SocialLogin></SocialLogin>
                     </form>

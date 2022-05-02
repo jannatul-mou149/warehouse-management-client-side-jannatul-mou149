@@ -1,6 +1,8 @@
 import React from 'react';
 import './Banner.css';
 import banner from '../../images/banner.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 const Banner = () => {
     return (
         <div className="banner">
@@ -34,8 +36,8 @@ const Banner = () => {
             </div>
             <div className="see-more">
                 <a href="/">
-                    <i className="fa-solid fa-angle-right"></i>
-                    <p>to Explore more</p>
+                    <i><FontAwesomeIcon icon={faArrowRight} /></i>
+                    <p> Explore more</p>
                 </a>
             </div>
         </div>
