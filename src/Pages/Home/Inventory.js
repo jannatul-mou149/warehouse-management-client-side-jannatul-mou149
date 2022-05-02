@@ -13,7 +13,7 @@ const Inventory = ({ car }) => {
             <img className='inventory-image' src={img} alt="" />
             <div className='p-4'>
                 <h4>{name}</h4>
-                <p>Price: {price} Tk</p>
+                <p>Price: {price}</p>
                 <p><small>{description}</small></p>
                 <p>Quantity: {quantity}</p>
                 <p>Supplier: {supplier}</p>

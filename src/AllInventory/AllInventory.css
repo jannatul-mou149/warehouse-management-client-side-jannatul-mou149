@@ -1,0 +1,26 @@
+.car-image {
+    height: 50px;
+    border-radius: 10%;
+}
+
+td {
+    padding-right: 30px;
+    padding: 10px;
+}
+
+th {
+    padding: 20px;
+}
+
+thead {
+    border: 1px solid rgb(230, 237, 240)
+}
+
+tr {
+    border: 1px solid rgb(230, 237, 240);
+}
+
+.icon-style {
+    background: transparent;
+    color: coral;
+}

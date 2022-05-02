@@ -6,6 +6,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import Home from './Pages/Home/Home';
 import InventoryDetails from './Pages/Home/InventoryDetails';
 import Login from './Pages/Login/Login';
+import MyItems from './Pages/MyItems/MyItems';
 import Registration from './Pages/Registration/Registration';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
@@ -21,6 +22,7 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/car/inventory' element={<AllInventory></AllInventory>} />
         <Route path='/addItems' element={<AddItems></AddItems>}></Route>
+        <Route path='/myItems' element={<MyItems></MyItems>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Registration></Registration>}></Route>
       </Routes>

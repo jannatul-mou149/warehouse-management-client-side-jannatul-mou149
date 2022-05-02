@@ -1,14 +1,24 @@
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import '../AllInventory/AllInventory.css';
-const AllInventory = () => {
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+
+const MyItems = () => {
+    const [user] = useAuthState(auth);
     const [cars, setCars] = useState([]);
+
     useEffect(() => {
-        fetch('http://localhost:5000/car')
-            .then(res => res.json())
-            .then(data => setCars(data))
-    }, []);
+
+        const getMyItems = async () => {
+            const email = user.email;
+            const url = `http://localhost:5000/myItems?email=${email}`;
+            const { data } = await axios.get(url);
+            setCars(data);
+        }
+        getMyItems();
+    }, [user]);
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
@@ -26,8 +36,8 @@ const AllInventory = () => {
         }
     }
     return (
-        <div id="inventories" className='container my-5'>
-            <h1 className='text-Secondary fw-bold text-center mb-5 mx-auto'>Manage Inventories</h1>
+        <div className='container my-5'>
+            <h1 className='text-Secondary fw-bold text-center mb-5 mx-auto'>My Items</h1>
             <table className="mx-auto">
                 <thead>
                     <th>Image</th>
@@ -58,4 +68,4 @@ const AllInventory = () => {
     );
 };
 
-export default AllInventory;
+export default MyItems;
