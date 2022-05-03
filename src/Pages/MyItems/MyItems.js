@@ -1,26 +1,38 @@
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './MyItems.css';
 
 const MyItems = () => {
     const [user] = useAuthState(auth);
     const [cars, setCars] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
 
         const getMyItems = async () => {
             const email = user.email;
             const url = `http://localhost:5000/myItems?email=${email}`;
-            const { data } = await axios.get(url, {
-                headers: {
-                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            try {
+                const { data } = await axios.get(url, {
+                    headers: {
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                    }
+                });
+                setCars(data);
+            }
+            catch (error) {
+                console.log(error.message);
+                if (error.response.status === 403 || error.response.status === 403) {
+                    signOut(auth);
+                    navigate('/login');
                 }
-            });
-            setCars(data);
+            }
         }
         getMyItems();
     }, [user]);
