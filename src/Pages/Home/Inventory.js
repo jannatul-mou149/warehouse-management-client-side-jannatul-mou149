@@ -17,7 +17,6 @@ const Inventory = ({ car }) => {
                 <p><small>{description}</small></p>
                 <p>Quantity: {quantity}</p>
                 <p>Supplier: {supplier}</p>
-
                 <button className='btn' onClick={() => navigateToInventoryDetails(_id)}>Manage</button>
 
             </div>

@@ -4,6 +4,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import './MyItems.css';
 
 const MyItems = () => {
     const [user] = useAuthState(auth);
@@ -14,7 +15,11 @@ const MyItems = () => {
         const getMyItems = async () => {
             const email = user.email;
             const url = `http://localhost:5000/myItems?email=${email}`;
-            const { data } = await axios.get(url);
+            const { data } = await axios.get(url, {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            });
             setCars(data);
         }
         getMyItems();
@@ -59,7 +64,7 @@ const MyItems = () => {
                             <td><small>{car.description}</small></td>
                             <td>{car.price}</td>
                             <td>{car.quantity}</td>
-                            <td><button onClick={() => handleDelete(car._id)}><FontAwesomeIcon icon={faTrashCan} beatFade /></button></td>
+                            <td><button onClick={() => handleDelete(car._id)}><FontAwesomeIcon className='trashIcon' icon={faTrashCan} beatFade /></button></td>
                         </tr>)
                     }
                 </tbody>

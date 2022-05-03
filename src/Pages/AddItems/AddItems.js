@@ -28,7 +28,7 @@ const AddItems = () => {
             <h1 className='fw-bold text-center mb-5'>Add Items to Inventory</h1>
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 <input className='w-50 mb-2' placeholder='Car Name' type="text" {...register("name")} required />
-                <input className='w-50 mb-2' value={user?.email} placeholder='Your Email' type="email" {...register("email")} required readOnly disabled />
+                <input className='w-50 mb-2' value={user?.email} placeholder='Your Email' type="email" {...register("email")} required readOnly />
                 <input className='w-50 mb-2' placeholder='Price' type="text" {...register("price")} required />
                 <input className='w-50 mb-2' placeholder='Quantity' type="number" {...register("quantity")} required />
                 <input className='w-50 mb-2' placeholder='Supplier' type="text" {...register("supplier")} required />
