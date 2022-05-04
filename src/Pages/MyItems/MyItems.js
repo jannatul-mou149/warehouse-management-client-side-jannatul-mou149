@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -55,7 +56,7 @@ const MyItems = () => {
     return (
         <div className='container my-5'>
             <h1 className='text-Secondary fw-bold text-center mb-5 mx-auto'>My Items</h1>
-            <table className="mx-auto">
+            <Table responsive="sm" striped bordered hover>
                 <thead>
                     <th>Image</th>
                     <th>Name</th>
@@ -80,7 +81,7 @@ const MyItems = () => {
                         </tr>)
                     }
                 </tbody>
-            </table>
+            </Table>
         </div >
     );
 };

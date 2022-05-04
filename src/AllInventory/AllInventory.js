@@ -1,6 +1,7 @@
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
 import '../AllInventory/AllInventory.css';
 const AllInventory = () => {
     const [cars, setCars] = useState([]);
@@ -28,7 +29,7 @@ const AllInventory = () => {
     return (
         <div id="inventories" className='container my-5'>
             <h1 className='text-Secondary fw-bold text-center mb-5 mx-auto'>Manage Inventories</h1>
-            <table className="mx-auto">
+            <Table responsive="sm" striped bordered hover>
                 <thead>
                     <th>Image</th>
                     <th>Name</th>
@@ -53,7 +54,7 @@ const AllInventory = () => {
                         </tr>)
                     }
                 </tbody>
-            </table>
+            </Table>
         </div >
     );
 };
