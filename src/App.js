@@ -12,6 +12,7 @@ import Registration from './Pages/Registration/Registration';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './NotFound/NotFound';
+import Supplier from './Pages/Supplier/Supplier';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           </RequiredAuth>} />
         <Route path='/addItems' element={<AddItems></AddItems>}></Route>
         <Route path='/myItems' element={<MyItems></MyItems>}></Route>
+        <Route path='/supplierInfo' element={<Supplier></Supplier>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Registration></Registration>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>

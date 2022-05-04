@@ -1,29 +1,58 @@
 [
     {
-        "id": 1,
-        "name": "BMW",
-        "price": "$350",
-        "description": "The 2022 BMW 4 Series blends class and performance in a way that few other luxury small cars can.",
-        "quantity": "20",
-        "supplier": "Aurthor",
-        "img": "https://i.ibb.co/tBt1DXk/bmw-m4.jpg"
+        "supplierName": "Aurthor",
+        "company": "Visteon",
+        "carMaker": "BMW",
+        "origin": "USA",
+        "contact": "+212-818-6082",
+        "address": "792 Small Street, New York"
     },
     {
-        "id": 2,
-        "name": "Ferrari",
-        "price": "$580",
-        "description": "It is powered by a 4.0-liter V-8 and a pair and three electric motors that produce a combined output.",
-        "quantity": "10",
-        "supplier": "Smith",
-        "img": "https://i.ibb.co/BK75Dqn/ferrari-br20.jpg"
+        "supplierName": "Smith",
+        "company": "Denso",
+        "carMaker": "Toyota",
+        "origin": "California",
+        "contact": "+619-823-1923",
+        "address": "44 Ocello Street, San Diego"
     },
     {
-        "id": 3,
-        "name": "Hondi Civic",
-        "price": "$238",
-        "description": "The Honda Civic has 1 Diesel Engine and 1 Petrol Engine on offer. The Diesel engine is 1597 cc.",
-        "quantity": "35",
-        "supplier": "Rohit",
-        "img": "https://i.ibb.co/gyWXw6d/honda-civic-1.jpg"
+        "supplierName": "Joseph",
+        "company": "Aisin Seiki",
+        "carMaker": "Marcedes Benz",
+        "origin": "NC",
+        "contact": "+212-818-6082",
+        "address": "Oriental, North Carolina"
+    },
+    {
+        "supplierName": "Smith",
+        "company": "Faurecia",
+        "carMaker": "Ferrari",
+        "origin": "New Jersey",
+        "contact": "+732-636-5102",
+        "address": "New Jersey, Woodbridge"
+    },
+    {
+        "supplierName": "Jonathan",
+        "company": "Delphi",
+        "carMaker": "Roll Royes",
+        "origin": "Atlanta",
+        "contact": "+404-229-1552",
+        "address": "2180 Post Farm Road, Georgia"
+    },
+    {
+        "supplierName": "Aurthor",
+        "company": "Visteon",
+        "carMaker": "Toyota Corolla",
+        "origin": "Phoenix",
+        "contact": "+602-953-0739",
+        "address": "4185 Crowfield Road, Arizona"
+    },
+    {
+        "supplierName": "Rohit",
+        "company": "Magheti Marelli",
+        "carMaker": "Honda Civic",
+        "origin": "India",
+        "contact": "+289-819-5883",
+        "address": "792 Small Street, New York"
     }
 ]
