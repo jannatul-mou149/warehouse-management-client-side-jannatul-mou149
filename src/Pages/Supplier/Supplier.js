@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import './Supplier.css';
 
 const Supplier = () => {
     const [supplierInfos, setSupplierInfos] = useState([]);
@@ -10,29 +10,21 @@ const Supplier = () => {
     }, []);
     return (
         <div className='container my-5'>
-            <h1 className='text-Secondary fw-bold text-center mb-5 mx-auto'>Supplier Information</h1>
-            <Table responsive="sm" striped bordered hover>
-                <thead>
-                    <th>Suppiler Name</th>
-                    <th>Company</th>
-                    <th>Car Maker</th>
-                    <th>Origin</th>
-                    <th>Contact Info.</th>
-                    <th>Physical Address</th>
-                </thead>
-                <tbody>
+            <h1 className='text-Secondary fw-bold text-center mb-4 mx-auto'>Supplier Information</h1>
+            <div className='row'>
+                <div className='inventories-container'>
                     {
-                        supplierInfos.map(supplierInfo => <tr key={supplierInfo._id}>
-                            <td>{supplierInfo.supplierName}</td>
-                            <td>{supplierInfo.company} </td>
-                            <td>{supplierInfo.carMaker} </td>
-                            <td><small>{supplierInfo.origin}</small></td>
-                            <td>{supplierInfo.contact}</td>
-                            <td>{supplierInfo.address}</td>
-                        </tr>)
+                        supplierInfos.map(supplierInfo => <div class="supplier-container" key={supplierInfo._id}>
+                            <img src={supplierInfo.img} alt='' />
+                            <h6><span>{supplierInfo.supplierName}</span>{supplierInfo.company}</h6>
+                            <p>Car Maker: {supplierInfo.carMaker}</p>
+                            <p>Country Origin: {supplierInfo.origin}</p>
+                            <p>Contact: {supplierInfo.contact}</p>
+                            <p>Phycical Address: {supplierInfo.address}</p>
+                        </div>)
                     }
-                </tbody>
-            </Table>
+                </div>
+            </div>
         </div >
     );
 };
