@@ -15,7 +15,7 @@ const Blogs = () => {
                         </div>
                         <h4>Difference between javascript and nodejs</h4>
                         <div className="seperator"></div>
-                        <p id="answer">Question Answer here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium beatae repudiandae corporis voluptatibus ullam excepturi suscipit quasi debitis, asperiores inventore?</p>
+                        <p id="answer">Javascript is a prototype-based, single-threaded programming language. Javascript runtime is an environment where Javascript source code executes within. JS Engines are responsible for parsing and executing source code. On the contaray, NodeJS is an open-source, runtime environment, which uses Chrome's V8 Engine, and executes Javascript code outside of a web browser. NodeJS provides the ability to develop server-side Javascript programs. Developers can interact with files hosted on the server, interact with databases, collect form data, and more.</p>
                         <a href="/" className="read-more">Read More
                         </a>
                     </div>
@@ -30,7 +30,7 @@ const Blogs = () => {
                         </div>
                         <h4>When should you use nodejs and when should you use mongodb</h4>
                         <div className="seperator"></div>
-                        <p id="answer1">Question Answer here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium beatae repudiandae corporis voluptatibus ullam excepturi suscipit quasi debitis, asperiores inventore?</p>
+                        <p id="answer1">MongoDB and NodeJS are two different technologies. MonogDB is a database system which provides API library that runs within a Nodejs application to give you programmatic access to MongoDB to efficiently store documents in a database and to perform operations like data updates, or to search documents by some criterias.NodeJS' is responsible to execute your application.</p>
                         <a href="/" className="read-more">Read More
                         </a>
                     </div>
@@ -45,7 +45,7 @@ const Blogs = () => {
                         </div>
                         <h4>Differences between sql and nosql databases.</h4>
                         <div className="seperator"></div>
-                        <p id="answer2">Question Answer here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium beatae repudiandae corporis voluptatibus ullam excepturi suscipit quasi debitis, asperiores inventore?</p>
+                        <p id="answer2">SQL is also pronounced as “S-Q-L” or as “See-Quel” and is primarily known to be a Relational Database.It is in table format.They are scalable vertically.SQL uses specialized DB hardware to enhance performance.Examples are Sqlite, MySql, Oracle, Postgres and MS-SQL.On the other hand,NoSQL is a distributed or Non-relational Database.NoSQL databases are document based with key-value pairs and graph databases.These are horizontally scalable.Examples are Cassandra, MongoDB, BigTable, Redis, RavenDb, Hbase, Neo4j and CouchDb</p>
                         <a href="/" className="read-more">Read More
                         </a>
                     </div>
@@ -60,7 +60,7 @@ const Blogs = () => {
                         </div>
                         <h4>What is the purpose of jwt and how does it work</h4>
                         <div className="seperator"></div>
-                        <p id="answer3">Question Answer here. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium beatae repudiandae corporis voluptatibus ullam excepturi suscipit quasi debitis, asperiores inventore?</p>
+                        <p id="answer3">JWTs or JSON Web Tokens are most commonly used to identify an authenticated user. They contain JSON objects which have the information that needs to be shared. Each JWT is also signed using cryptography to ensure that the JSON contents cannot be altered by the client or a malicious party.A JWT is a string made up of three parts, separated by dots, and serialized using base64. In the most common serialization format, compact serialization.Once decoded, you will get two JSON strings: 1. The header and the payload. 2. The signature.The payload contains the claims. This is displayed as a JSON string, usually containing no more than a dozen fields to keep the JWT compact. This information is typically used by the server to verify that the user has permission to perform the action they are requesting.The signature ensures that the token hasn't been altered. The party that creates the JWT signs the header and payload with a secret that is known to both the issuer and receiver, or with a private key known only to the sender. When the token is used, the receiving party verifies that the header and payload match the signature. </p>
                         <a href="/" className="read-more">Read More
                         </a>
                     </div>
