@@ -25,3 +25,19 @@ tr {
     background: transparent;
     color: coral;
 }
+
+.add-btn {
+    width: 100%;
+    background-color: #7647ed;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 6px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 20px 0 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}

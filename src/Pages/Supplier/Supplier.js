@@ -17,8 +17,8 @@ const Supplier = () => {
                     <th>Company</th>
                     <th>Car Maker</th>
                     <th>Origin</th>
-                    <th>Contact</th>
-                    <th>Address</th>
+                    <th>Contact Info.</th>
+                    <th>Physical Address</th>
                 </thead>
                 <tbody>
                     {

@@ -1,10 +1,12 @@
-import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import '../AllInventory/AllInventory.css';
 const AllInventory = () => {
     const [cars, setCars] = useState([]);
+    const navigate = useNavigate();
     useEffect(() => {
         fetch('http://localhost:5000/car')
             .then(res => res.json())
@@ -26,10 +28,16 @@ const AllInventory = () => {
                 })
         }
     }
+    const handleAddItem = () => {
+        navigate('/addItems')
+    }
     return (
         <div id="inventories" className='container my-5'>
             <h1 className='text-Secondary fw-bold text-center mb-5 mx-auto'>Manage Inventories</h1>
             <Table responsive="sm" striped bordered hover>
+                <thead>
+                    <button onClick={handleAddItem} className='add-btn'>Add<FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></button>
+                </thead>
                 <thead>
                     <th>Image</th>
                     <th>Name</th>
