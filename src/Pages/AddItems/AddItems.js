@@ -31,6 +31,7 @@ const AddItems = () => {
                 <input className='w-50 mb-2' value={user?.email} placeholder='Your Email' type="email" {...register("email")} required readOnly />
                 <input className='w-50 mb-2' placeholder='Price' type="text" {...register("price")} required />
                 <input className='w-50 mb-2' placeholder='Quantity' type="number" {...register("quantity")} required />
+                <input className='w-50 mb-2' placeholder='Sold' type="number" {...register("sold")} required />
                 <input className='w-50 mb-2' placeholder='Supplier' type="text" {...register("supplier")} required />
                 <input className='w-50 mb-2' placeholder='Photo URL' type="text" {...register("img")} required />
                 <input className='w-50 mb-2' placeholder='Description' {...register("description")} required />

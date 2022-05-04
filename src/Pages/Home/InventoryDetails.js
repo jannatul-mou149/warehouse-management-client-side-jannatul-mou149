@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import './InventoryDetails.css';
 
 const InventoryDetails = () => {
     const { id } = useParams();
@@ -79,30 +80,50 @@ const InventoryDetails = () => {
                 })
         }
     }
-
     return (
         <div>
             <h1 className='fw-bold text-center m-5'>Inventory details</h1>
-
-            <div className="container py-5">
-                <div className="inner-content">
-                    <img className='img-fluid' src={car.img} alt="" />
-                    <h1 className='text-center text-secondary m-2'>{car.name}</h1>
-                    <div className='text-center mt-3'>
-                        <p>Price: {car.price} Tk</p>
-                        <p>Supplier: {car.supplier}</p>
-                        <p>Quantity : {car.quantity}</p>
-                        <button className='btn' onClick={handleCarQuantity}>Delivered</button>
+            <div className="best-sell">
+                <div className="car-info">
+                    <div className="car">
+                        <div className="car-detail">
+                            <div className="img">
+                                <img src={car.img} alt="" />
+                            </div>
+                            <div className="other-info">
+                                <div className="name-model">
+                                    <div className="name">{car.name}</div>
+                                    <div className="model">sold : {car.sold}</div>
+                                </div>
+                                <div className="specs">
+                                    <div className="price">
+                                        <span>Pirce :</span> {car.price}
+                                    </div>
+                                    <div className="sold">
+                                        <span>Supplier: :</span> {car.supplier}
+                                    </div>
+                                    <div className="engine">
+                                        <span>Quantity :</span> {car.quantity}
+                                    </div>
+                                    <div className="engine">
+                                        <button className='deliver-btn' onClick={handleCarQuantity}>Delivered</button>
+                                    </div>
+                                    <div className="engine">
+                                        <form onSubmit={handleCarAddQuantity}>
+                                            <input type="number" name="number" placeholder='Insert Quantity' />
+                                            <br />
+                                            <input type="submit" value="Update Stock" />
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="line"></div>
                     </div>
                 </div>
-                <form onSubmit={handleCarAddQuantity}>
-                    <input type="number" name="number" placeholder='Insert Quantity' />
-                    <br />
-                    <input type="submit" value="Update Stock" />
-                </form>
-                <div className='text-center'>
-                    <button onClick={navigateToInventory} className='btn'>Manage Inventory</button>
-                </div>
+            </div>
+            <div className='text-center mb-5'>
+                <button onClick={navigateToInventory} className='btn'>Manage Inventory</button>
             </div>
         </div>
     );

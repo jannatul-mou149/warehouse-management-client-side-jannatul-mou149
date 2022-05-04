@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.best-sell {
+    width: min(1000px, 95%);
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.car {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-info .car .line {
+    position: relative;
+    height: 1.3px;
+    width: 70%;
+    background: #7845F9;
+    margin: 20px 0;
+}
+
+.car-info .car-detail {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    border: 1px solid #7845F9;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.car-info .car-detail .other-info {
+    padding: 10px;
+    width: 100%;
+}
+
+.car-info .car-detail .img {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-info .car-detail .img img {
+    width: clamp(200px, 40vw, 400px);
+    box-shadow: 0 0 0 5px #d8cdf0;
+    height: auto;
+    object-fit: cover;
+}
+
+.car-info .car-detail .other-info span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-right: 10px;
+}
+
+.car-info .car-detail .other-info .name {
+    font-size: 1.3rem;
+    font-weight: 500;
+
+}
+
+.car-info .car-detail .other-info .model {
+    font-size: .9rem;
+    color: #7845F9;
+}
+
+.car-info .car-detail .other-info .specs {
+    margin-top: 20px;
+}
+
+.car-info .car-detail .other-info .price {
+    background: #f4f1ff;
+    width: 100%;
+    padding: 4px 10px;
+}
+
+.car-info .car-detail .other-info .sold {
+    background: transparent;
+    width: 100%;
+    padding: 4px 10px;
+}
+
+.car-info .car-detail .other-info .engine {
+    background: #f4f1ff;
+    width: 100%;
+    padding: 4px 10px;
+}
+
+.deliver-btn {
+    width: 100%;
+    background-color: #7845F9;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 6px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 20px 0 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
