@@ -9,6 +9,8 @@ import { signOut } from 'firebase/auth';
 
 const Header = () => {
     const [user] = useAuthState(auth);
+    const photo = user?.photoURL;
+    console.log(photo);
     const handleSignOut = () => {
         signOut(auth);
     }
@@ -31,6 +33,9 @@ const Header = () => {
                                 <Nav.Link as={Link} to='addItems'>Add Item</Nav.Link>
                                 <Nav.Link as={Link} to='myItems'>My Items</Nav.Link>
                                 <Nav.Link as={Link} to='supplierInfo'>Supplier</Nav.Link>
+                                <Navbar.Brand as={Link} to="/">
+                                    <img className='user-img' src={photo} height={40} alt="" />
+                                </Navbar.Brand>
                             </>
                         }
                         {

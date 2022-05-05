@@ -16,6 +16,7 @@
 
 .car {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -32,6 +33,7 @@
 .car-info .car-detail {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     border: 1px solid #7845F9;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2);

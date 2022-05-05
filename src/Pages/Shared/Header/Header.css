@@ -3,10 +3,18 @@
 }
 
 .singout-btn {
-    background-color: transparent;
+    background-color: rgb(48, 41, 49);
     color: rgba(255, 254, 255, 0.7);
-    border-radius: 20px;
-    padding: 10px;
+    border-radius: 3px;
+    padding: 2px 15px;
     border: 1px solid rgba(255, 254, 255, 0.7);
     font-size: 13px;
+}
+
+.singout-btn:hover {
+    background-color: #1D1E33;
+}
+
+.user-img {
+    border-radius: 50%;
 }
