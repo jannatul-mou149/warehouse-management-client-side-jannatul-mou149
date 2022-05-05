@@ -9,8 +9,7 @@ const Banner = () => {
             <div className="banner-text">
                 <div className="text-left">
                     <h1>720S SPIDER</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione incidunt dicta quisquam itaque porro
-                        ex.</p>
+                    <p>The McLaren 720S Spider is the embodiment of this approach. A light, strong supercar that delivers ruthless performance.</p>
                     <a href="/">Explore now <i className="fa-solid fa-arrow-right-long"></i></a>
                 </div>
                 <div className="text-right">

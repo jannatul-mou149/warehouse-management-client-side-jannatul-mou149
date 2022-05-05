@@ -1,0 +1,67 @@
+.delivery {
+    width: min(1200px, 95%);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.total-delivery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.total-delivery .number {
+    text-align: center;
+}
+
+.total-delivery .number h1 {
+    font-size: 8rem;
+    font-weight: 900;
+    background-image: url("../../../images/port.jpg");
+    background-repeat: no-repeat;
+    background-size: 500px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased
+}
+
+.total-delivery .number p {
+    margin-top: -20px;
+    margin-bottom: 60px;
+    color: #7845F9;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.total-delivery .brands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.total-delivery .brands .img {
+    width: 200px;
+    height: 90px;
+    background: #fff;
+    box-shadow: 0 0 5px 4px rgba(53, 53, 53, 0.04);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brands .img img {
+    width: 100px;
+}
+
+
+#map {
+    position: absolute;
+    opacity: .2;
+    z-index: -1;
+    object-fit: cover;
+}

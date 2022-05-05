@@ -1,0 +1,91 @@
+.team {
+    width: min(1200px, 95%);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.team .our-team {
+    display: flex;
+    align-items: center;
+}
+
+.team .our-team .line {
+    height: 2px;
+    width: 50px;
+    background: #FD7B6C;
+    margin-right: 15px;
+}
+
+.team .our-team p {
+    color: #FD7B6C;
+    font-weight: 500;
+}
+
+.team .title h1 {
+    font-size: 2.3rem;
+    color: #353535;
+}
+
+.team .title h1 span {
+    color: #7845F9;
+}
+
+.team .team-member {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.team .team-member .member img {
+    width: 230px;
+    min-width: 130px;
+    cursor: pointer;
+}
+
+.team .team-member .member .member-info {
+    position: relative;
+    bottom: 140px;
+    left: calc(100% - 165px);
+    background: #FD7B6C;
+    padding: 10px 20px;
+    color: #fff;
+    width: 170px;
+    opacity: 0;
+    transition: .6s;
+}
+
+.team .team-member .member .member-info:hover {
+    opacity: 1;
+}
+
+.team .team-member .member .member-info p {
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.team .team-member .member .member-info h3 {
+    font-size: 1, 1rem;
+    font-weight: 600;
+}
+
+.team .team-member .member .member-social ul {
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.team .team-member .member .member-social ul li a {
+    color: #fff;
+}
+
+#a1:hover+#b1,
+#a2:hover+#b2,
+#a3:hover+#b3,
+#a4:hover+#b4 {
+    opacity: 1;
+}
