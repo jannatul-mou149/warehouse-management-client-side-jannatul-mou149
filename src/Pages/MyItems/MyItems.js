@@ -1,7 +1,6 @@
 import { faPlus, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
-import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -50,10 +49,8 @@ const MyItems = () => {
     return (
         <div className='container my-5'>
             <h1 className='text-Secondary fw-bold text-center mb-5 mx-auto'>My Items</h1>
+            <button onClick={handleAddItem} className='btnn'>Add Items  <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></button>
             <Table responsive="sm" striped bordered hover>
-                <thead>
-                    <button onClick={handleAddItem} className='add-btn'>Add<FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></button>
-                </thead>
                 <thead>
                     <th>Image</th>
                     <th>Name</th>

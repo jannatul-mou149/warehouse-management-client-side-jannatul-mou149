@@ -34,10 +34,8 @@ const AllInventory = () => {
     return (
         <div id="inventories" className='container my-5'>
             <h1 className='text-Secondary fw-bold text-center mb-5 mx-auto'>Manage Inventories</h1>
+            <button onClick={handleAddItem} className='btnn'>Add Items<FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></button>
             <Table responsive="sm" striped bordered hover>
-                <thead>
-                    <button onClick={handleAddItem} className='add-btn'>Add<FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></button>
-                </thead>
                 <thead>
                     <th>Image</th>
                     <th>Name</th>
