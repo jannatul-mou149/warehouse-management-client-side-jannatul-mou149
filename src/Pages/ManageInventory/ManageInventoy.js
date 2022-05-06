@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import '../AllInventory/AllInventory.css';
-const AllInventory = () => {
+import './ManageInventory.css';
+const ManageInventory = () => {
     const [cars, setCars] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
@@ -30,6 +30,9 @@ const AllInventory = () => {
     }
     const handleAddItem = () => {
         navigate('/addItems')
+    }
+    const navigateToAllInventory = () => {
+        navigate(`/allInventory`);
     }
     return (
         <div id="inventories" className='container my-5'>
@@ -61,8 +64,11 @@ const AllInventory = () => {
                     }
                 </tbody>
             </Table>
+            <div className='text-center'>
+                <button className='btn' onClick={navigateToAllInventory}>All Inventory</button>
+            </div>
         </div >
     );
 };
 
-export default AllInventory;
+export default ManageInventory;

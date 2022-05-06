@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom';
-import AllInventory from './AllInventory/AllInventory';
 import './App.css';
 import AddItems from './Pages/AddItems/AddItems';
 import Blogs from './Pages/Blogs/Blogs';
@@ -13,6 +12,8 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './NotFound/NotFound';
 import Supplier from './Pages/Supplier/Supplier';
+import ManageInventory from './Pages/ManageInventory/ManageInventoy';
+import AllInventories from './Pages/AllInventories/AllInventories';
 
 function App() {
   return (
@@ -28,9 +29,10 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/car/inventory' element={
           <RequiredAuth>
-            <AllInventory></AllInventory>
+            <ManageInventory></ManageInventory>
           </RequiredAuth>} />
         <Route path='/addItems' element={<AddItems></AddItems>}></Route>
+        <Route path='/allInventory' element={<AllInventories></AllInventories>}></Route>
         <Route path='/myItems' element={<MyItems></MyItems>}></Route>
         <Route path='/supplierInfo' element={<RequiredAuth>
           <Supplier></Supplier>
