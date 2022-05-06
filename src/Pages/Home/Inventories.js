@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import AllInventory from '../../AllInventory/AllInventory';
 import './Inventories.css';
 import Inventory from './Inventory';
 const Inventories = () => {

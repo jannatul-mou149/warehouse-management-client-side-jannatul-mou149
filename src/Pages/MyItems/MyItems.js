@@ -19,21 +19,12 @@ const MyItems = () => {
         const getMyItems = async () => {
             const email = user.email;
             const url = `https://stark-scrubland-34079.herokuapp.com/myItems?email=${email}`;
-            try {
-                const { data } = await axios.get(url, {
-                    headers: {
-                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
-                    }
-                });
-                setCars(data);
-            }
-            catch (error) {
-                console.log(error.message);
-                if (error.response.status === 403 || error.response.status === 403) {
-                    signOut(auth);
-                    navigate('/login');
+            const { data } = await axios.get(url, {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
                 }
-            }
+            });
+            setCars(data);
         }
         getMyItems();
     }, [user]);
