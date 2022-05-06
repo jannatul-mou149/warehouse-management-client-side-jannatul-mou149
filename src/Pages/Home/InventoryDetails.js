@@ -6,7 +6,7 @@ const InventoryDetails = () => {
     const { id } = useParams();
     const [car, setCar] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/car/${id}`;
+        const url = `https://stark-scrubland-34079.herokuapp.com/car/${id}`;
         console.log(url);
         fetch(url)
             .then(res => res.json())
@@ -18,12 +18,13 @@ const InventoryDetails = () => {
     }
 
     const handleCarQuantity = () => {
-        let { name, _id, description, price, img, quantity, supplier } = car;
+        let { name, _id, description, price, img, quantity, supplier, sold } = car;
         if (quantity > 0) {
             quantity = quantity - 1;
-            const updateCar = { name, _id, description, price, img, quantity, supplier };
+            sold = parseInt(sold) + 1;
+            const updateCar = { name, _id, description, price, img, quantity, supplier, sold };
 
-            const url = `http://localhost:5000/car/${id}`;
+            const url = `https://stark-scrubland-34079.herokuapp.com/car/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -59,7 +60,7 @@ const InventoryDetails = () => {
             quantity = parseInt(quantity) + parseInt(newAddedQuantity);
 
             const updateCar = { name, _id, description, price, img, quantity, supplier };
-            const url = `http://localhost:5000/car/${id}`;
+            const url = `https://stark-scrubland-34079.herokuapp.com/car/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -96,13 +97,19 @@ const InventoryDetails = () => {
                                     <div className="model">sold : {car.sold}</div>
                                 </div>
                                 <div className="specs">
+                                    <div className="other-info">
+                                        <span>ID :</span> {car._id}
+                                    </div>
                                     <div className="price">
                                         <span>Pirce :</span> {car.price}
                                     </div>
-                                    <div className="sold">
-                                        <span>Supplier: :</span> {car.supplier}
+                                    <div className="other-info">
+                                        <span>Description :</span> {car.description}
                                     </div>
-                                    <div className="engine">
+                                    <div className="price">
+                                        <span>Supplier:</span> {car.supplier}
+                                    </div>
+                                    <div className="other-info">
                                         <span>Quantity :</span> {car.quantity}
                                     </div>
                                     <div className="engine">

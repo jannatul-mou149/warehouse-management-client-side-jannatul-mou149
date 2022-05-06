@@ -29,7 +29,7 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         await signInWithEmailAndPassword(email, password);
-        const { data } = await axios.post('http://localhost:5000/login', { email });
+        const { data } = await axios.post('https://stark-scrubland-34079.herokuapp.com/login', { email });
         localStorage.setItem('accessToken', data.accessToken);
         navigate(from, { replace: true });
     }
@@ -81,10 +81,9 @@ const Login = () => {
             <div className="panels-container">
                 <div className="panel left-panel">
                     <div className="content">
-                        <h3>New here ?</h3>
+                        <h3>New here to Automoto?</h3>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-                            ex ratione. Aliquid!
+                            Sign up to explore the amazing feautures of our warehouse management
                         </p>
                         <Link to='/register'>
                             <button onClick={navigateToRegister} className="btn transparent" id="sign-up-btn">

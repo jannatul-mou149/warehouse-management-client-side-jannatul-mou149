@@ -23,10 +23,10 @@ const AmazingTeam = () => {
                             <h3>Braxton</h3>
                             <div class="member-social">
                                 <ul>
-                                    <li><a href="/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="/"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="/"><i class="fa-brands fa-twitter"></i></a></li>
-                                    <li><a href="/"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-twitter"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-google-plus-g"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -38,10 +38,10 @@ const AmazingTeam = () => {
                             <h3>Wesley</h3>
                             <div class="member-social">
                                 <ul>
-                                    <li><a href="/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="/"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="/"><i class="fa-brands fa-twitter"></i></a></li>
-                                    <li><a href="/"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-twitter"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-google-plus-g"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -53,10 +53,10 @@ const AmazingTeam = () => {
                             <h3>Archie</h3>
                             <div class="member-social">
                                 <ul>
-                                    <li><a href="/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="/"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="/"><i class="fa-brands fa-twitter"></i></a></li>
-                                    <li><a href="/"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-twitter"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-google-plus-g"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -68,10 +68,10 @@ const AmazingTeam = () => {
                             <h3>Evertt</h3>
                             <div class="member-social">
                                 <ul>
-                                    <li><a href="/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="/"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="/"><i class="fa-brands fa-twitter"></i></a></li>
-                                    <li><a href="/"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-twitter"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-google-plus-g"></i></a></li>
+                                    <li><a href="/"><i className="fab fa-instagram"></i></a></li>
                                 </ul>
                             </div>
                         </div>

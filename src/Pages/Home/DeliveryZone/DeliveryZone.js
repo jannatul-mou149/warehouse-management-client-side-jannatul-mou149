@@ -41,7 +41,7 @@ const DeliveryZone = () => {
                     </div>
                 </div>
             </div>
-            <img id="map" src={map} alt="" />
+            <img className='img-fluid' id="map" src={map} alt="" />
         </div>
     );
 };

@@ -4,7 +4,7 @@ import './Supplier.css';
 const Supplier = () => {
     const [supplierInfos, setSupplierInfos] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/supplierInfo')
+        fetch('https://stark-scrubland-34079.herokuapp.com/supplierInfo')
             .then(res => res.json())
             .then(data => setSupplierInfos(data))
     }, []);

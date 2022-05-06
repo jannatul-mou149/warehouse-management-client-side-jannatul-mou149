@@ -10,7 +10,6 @@ import { signOut } from 'firebase/auth';
 const Header = () => {
     const [user] = useAuthState(auth);
     const photo = user?.photoURL;
-    console.log(photo);
     const handleSignOut = () => {
         signOut(auth);
     }

@@ -8,14 +8,14 @@ const AllInventory = () => {
     const [cars, setCars] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
-        fetch('http://localhost:5000/car')
+        fetch('https://stark-scrubland-34079.herokuapp.com/car')
             .then(res => res.json())
             .then(data => setCars(data))
     }, []);
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/car/${id}`;
+            const url = `https://stark-scrubland-34079.herokuapp.com/car/${id}`;
             console.log(url);
             fetch(url, {
                 method: 'DELETE'

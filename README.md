@@ -20,5 +20,5 @@ This project is a wirehouse management type project. Using this one can easily m
 
  - Client-side Repo Link: [Click here]('https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-jannatul-mou149')
  - Server-side Repo Link: [Click here]('https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-jannatul-mou149')
- - Live Site: [Click here]()
+ - Live Site: [Click here]('https://automoto-2b5c0.web.app')
  - Stack OverFlow Question URL: [Click here]()

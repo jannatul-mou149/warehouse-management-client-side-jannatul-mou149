@@ -65,16 +65,6 @@
     margin-bottom: 30px;
 }
 
-.item a.read-more {
-    font-size: 15px;
-    text-transform: uppercase;
-    color: rgba(255, 254, 255, 0.9);
-    text-decoration: none;
-    background-color: #7845F9;
-    padding: 10px 15px;
-    border-radius: 3px;
-}
-
 .item a i {
     opacity: 1;
     padding-left: 0px;

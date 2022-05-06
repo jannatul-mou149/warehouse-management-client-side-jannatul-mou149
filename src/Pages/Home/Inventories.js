@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import AllInventory from '../../AllInventory/AllInventory';
 import './Inventories.css';
 import Inventory from './Inventory';
 const Inventories = () => {
     const [cars, setCars] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/car')
+        fetch('https://stark-scrubland-34079.herokuapp.com/car')
             .then(res => res.json())
             .then(data => setCars(data))
     }, []);

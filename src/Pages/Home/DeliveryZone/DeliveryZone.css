@@ -3,6 +3,7 @@
     margin: auto;
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
 
 .total-delivery {
@@ -17,7 +18,7 @@
 }
 
 .total-delivery .number h1 {
-    font-size: 8rem;
+    font-size: clamp(4rem, 10vw, 8rem);
     font-weight: 900;
     background-image: url("../../../images/port.jpg");
     background-repeat: no-repeat;

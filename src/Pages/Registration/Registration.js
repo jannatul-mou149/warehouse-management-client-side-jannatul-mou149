@@ -63,8 +63,7 @@ const Registration = () => {
                     <div className="content">
                         <h3>Already have an Account ?</h3>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-                            ex ratione. Aliquid!
+                            Sign in to explore the amazing feautures of our warehouse management
                         </p>
                         <Link to='/login'>
                             <button className="btn transparent" id="sign-up-btn" onClick={navigateLogin}>

@@ -18,7 +18,7 @@ const MyItems = () => {
 
         const getMyItems = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/myItems?email=${email}`;
+            const url = `https://stark-scrubland-34079.herokuapp.com/myItems?email=${email}`;
             try {
                 const { data } = await axios.get(url, {
                     headers: {
@@ -40,7 +40,7 @@ const MyItems = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/car/${id}`;
+            const url = `https://stark-scrubland-34079.herokuapp.com/car/${id}`;
             console.log(url);
             fetch(url, {
                 method: 'DELETE'
