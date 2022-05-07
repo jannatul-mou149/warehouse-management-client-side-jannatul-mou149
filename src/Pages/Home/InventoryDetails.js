@@ -10,19 +10,18 @@ const InventoryDetails = () => {
         console.log(url);
         fetch(url)
             .then(res => res.json())
-            .then(data => setCar(data))
-    }, [id])
+            .then(data => setCar(data));
+    }, []);
     const navigate = useNavigate();
     const navigateToInventory = () => {
         navigate(`/car/inventory`);
     }
 
     const handleCarQuantity = () => {
-        let { name, _id, description, price, img, quantity, supplier, sold } = car;
+        let { name, _id, description, price, img, quantity, supplier } = car;
         if (quantity > 0) {
             quantity = quantity - 1;
-            sold = parseInt(sold) + 1;
-            const updateCar = { name, _id, description, price, img, quantity, supplier, sold };
+            const updateCar = { name, _id, description, price, img, quantity, supplier };
 
             const url = `https://stark-scrubland-34079.herokuapp.com/car/${id}`;
             fetch(url, {
@@ -35,17 +34,17 @@ const InventoryDetails = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log('success', data);
-                })
-
-            fetch(url)
-                .then(res => res.json())
-                .then(data => {
-                    setCar(data)
-                })
+                    fetch(url)
+                        .then(res => res.json())
+                        .then(data => {
+                            setCar(data)
+                        });
+                });
         }
         else {
             alert('stock out')
         }
+        window.location.reload(false)
     }
 
     const handleCarAddQuantity = (event) => {
@@ -71,14 +70,14 @@ const InventoryDetails = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log('success', data);
-                })
-
-            fetch(url)
-                .then(res => res.json())
-                .then(data => {
-                    setCar(data)
-                    event.target.reset()
-                })
+                    fetch(url)
+                        .then(res => res.json())
+                        .then(data => {
+                            setCar(data)
+                            event.target.reset()
+                        });
+                });
+            window.location.reload(false)
         }
     }
     return (
@@ -94,7 +93,6 @@ const InventoryDetails = () => {
                             <div className="other-info">
                                 <div className="name-model">
                                     <div className="name">{car.name}</div>
-                                    <div className="model">sold : {car.sold}</div>
                                 </div>
                                 <div className="specs">
                                     <div className="other-info">

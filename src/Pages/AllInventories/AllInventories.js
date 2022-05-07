@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AllInventory from '../AllInventory/AllInventory';
+import Loading from '../Loading/Loading';
 
 const AllInventories = () => {
     const [cars, setCars] = useState([]);
@@ -15,23 +16,27 @@ const AllInventories = () => {
     }
     return (
         <div>
-            <div id="inventories" className='container my-5'>
-                <div className="row">
-                    <h1 className='text-Secondary fw-bold text-center mb-5'>All Inventories</h1>
-                    <div className="inventories-container">
-                        {
-                            cars.map(car => <AllInventory
-                                key={car._id}
-                                car={car}
-                            >
-                            </AllInventory>)
-                        }
-                    </div>
-                    <div className='text-center'>
-                        <button onClick={navigateToInventory} className='btn'>Manage Inventory</button>
-                    </div>
-                </div>
-            </div >
+            {
+                cars[0]?.img ? <div>
+                    <div id="inventories" className='container my-5'>
+                        <div className="row">
+                            <h1 className='text-Secondary fw-bold text-center mb-5'>All Inventories</h1>
+                            <div className="inventories-container">
+                                {
+                                    cars.map(car => <AllInventory
+                                        key={car._id}
+                                        car={car}
+                                    >
+                                    </AllInventory>)
+                                }
+                            </div>
+                            <div className='text-center'>
+                                <button onClick={navigateToInventory} className='btn'>Manage Inventory</button>
+                            </div>
+                        </div>
+                    </div >
+                </div> : <Loading></Loading>
+            }
         </div>
     );
 };
