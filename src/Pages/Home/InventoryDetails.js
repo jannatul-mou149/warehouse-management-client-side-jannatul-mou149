@@ -44,7 +44,6 @@ const InventoryDetails = () => {
         else {
             alert('stock out')
         }
-        window.location.reload(false)
     }
 
     const handleCarAddQuantity = (event) => {
@@ -77,7 +76,6 @@ const InventoryDetails = () => {
                             event.target.reset()
                         });
                 });
-            window.location.reload(false)
         }
     }
     return (
